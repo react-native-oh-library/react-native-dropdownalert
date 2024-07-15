@@ -269,6 +269,8 @@ const DropdownAlert: React.FunctionComponent<DropdownAlertProps> = ({
   const windowDimensions = useWindowDimensions();
   const isIOS = Platform.OS === 'ios';
   const isAndroid = Platform.OS === 'android';
+  const isHarmony = Platform.OS === 'harmony';
+
   const isBelowIOS11 = isIOS && Number(Platform.Version) < 11;
   const [dimValue, setDimValue] = useState(0);
   const [height, setHeight] = useState(99);
@@ -411,7 +413,7 @@ const DropdownAlert: React.FunctionComponent<DropdownAlertProps> = ({
 
   function _updateStatusBar(active = false, type = '') {
     if (updateStatusBar && alertPosition === DropdownAlertPosition.Top) {
-      if (isAndroid) {
+      if (isAndroid||isHarmony) {
         if (active) {
           let backgroundColor = activeStatusBarBackgroundColor;
           if (!backgroundColor) {
@@ -607,11 +609,11 @@ const DropdownAlert: React.FunctionComponent<DropdownAlertProps> = ({
     let additionalAlertViewStyle: ViewStyle = {
       backgroundColor: _getBackgroundColorForType(alertData.type),
     };
-    if (isAndroid && translucent) {
+    if ((isAndroid ||isHarmony) && translucent) {
       additionalAlertViewStyle.marginTop = StatusBar.currentHeight;
     }
     let SafeView = SafeAreaView;
-    if (isBelowIOS11 || isAndroid) {
+    if (isBelowIOS11 || isAndroid || isHarmony) {
       SafeView = View;
     }
     return (
