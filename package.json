@@ -1,6 +1,6 @@
 {
   "name": "@react-native-oh-tpl/react-native-dropdownalert",
-  "version": "5.1.0-0.1.0",
+  "version": "5.1.0-0.1.1",
   "description": "An alert to notify users about an error or something else.",
   "main": "DropdownAlert.tsx",
   "scripts": {
@@ -29,9 +29,9 @@
   "author": "Brian Sinnicke",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/testshallpass/react-native-dropdownalert/issues"
+    "url": "https://github.com/react-native-oh-library/react-native-dropdownalert/issues"
   },
-  "homepage": "https://github.com/testshallpass/react-native-dropdownalert#readme",
+  "homepage": "https://github.com/react-native-oh-library/react-native-dropdownalert#readme",
   "devDependencies": {
     "@jest/globals": "29.6.3",
     "@react-native/babel-preset": "0.73.18",
