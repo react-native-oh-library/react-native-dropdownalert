@@ -6,7 +6,7 @@
 
 [中文 / Chinese](https://gitee.com/react-native-oh-library/usage-docs/blob/master/zh-cn/react-native-dropdownalert.md)
 
-[英文 / English](https://gitee.com/react-native-oh-library/usage-docs/blob/master/zh-en/react-native-dropdownalert.md)
+[英文 / English](https://gitee.com/react-native-oh-library/usage-docs/blob/master/en/react-native-dropdownalert.md)
 
 ## Codegen
 
