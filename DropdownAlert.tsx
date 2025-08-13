@@ -609,11 +609,11 @@ const DropdownAlert: React.FunctionComponent<DropdownAlertProps> = ({
     let additionalAlertViewStyle: ViewStyle = {
       backgroundColor: _getBackgroundColorForType(alertData.type),
     };
-    if ((isAndroid) && translucent) {
+    if ((isAndroid || isHarmony) && translucent) {
       additionalAlertViewStyle.marginTop = StatusBar.currentHeight;
     }
     let SafeView = SafeAreaView;
-    if (isBelowIOS11 || isAndroid) {
+    if (isBelowIOS11 || isAndroid || isHarmony) {
       SafeView = View;
     }
     return (
